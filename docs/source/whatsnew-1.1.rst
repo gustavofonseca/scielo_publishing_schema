@@ -31,4 +31,20 @@ versão anterior.
 * O elemento ``<collab>`` passa a ser permitido como descendente de 
   ``article/back/ref-list/ref/element-citation`` apenas quando filho de 
   ``<person-group>``.
+* O atributo ``@specific-use="sps-1.1"`` tornou-se obrigatório para o elemento
+  ``article``.
+* O atributo ``@journal-id-type="publisher-id"`` tornou-se obrigatório para o 
+  elemento ``article/front/journal-meta/journal-id``.
+
+
+Alterações
+----------
+
+São as alterações na especificação que não invalidam os XMLs válidos na versão
+anterior.
+
+* O elemento ``article/front/journal-meta/journal-id`` pode aparecer mais de 
+  uma vez, no caso de ocorrência do título Pubmed.
+
+
 

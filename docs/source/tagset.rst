@@ -529,32 +529,42 @@ Aparece em
   :ref:`elemento-journal-meta`
  
 Atributos obrigatórios
-  1. journal-id-type='nlm-ta' ou journal-id-type='publisher-id'
+  1. journal-id-type='publisher-id'
  
 Ocorre
-  Uma vez
+  Uma ou mais vezes
 
 
-Especifica o título padronizado do periódico.
- 
-Para o uso do título do periódico no Pubmed, 
-utiliza-se ``@journal-id-type="nlm-ta"``:
+Especifica o identificador do periódico na coleção SciELO. O título do 
+periódico no Pubmed também deve ser identificado quando disponível.
+
+Os valores permitidos para o atributo ``@journal-id-type`` são:
+
++--------------+-----------------------------------------+
+| Valor        | Descrição                               |
++==============+=========================================+
+| publisher-id | Acrônimo do periódico na coleção SciELO |
++--------------+-----------------------------------------+
+| nlm-ta       | Título do periódico no Pubmed           |
++--------------+-----------------------------------------+
+
+
+Exemplo:
  
 .. code-block:: xml
- 
-    <journal-id journal-id-type="nlm-ta">Mem Inst Oswaldo Cruz</journal-id>
+
+    ...
+    <journal-meta>
+        ...
+        <journal-id journal-id-type="publisher-id">mioc</journal-id>
+        <journal-id journal-id-type="nlm-ta">Mem Inst Oswaldo Cruz</journal-id>
+        ...
+    </journal-meta>
+    ...
  
 
-.. note:: Para verificar se o periódico está indexado no Medline 
-          consulte o link http://www.ncbi.nlm.nih.gov/pubmed/advanced
-
-
-Para o uso do acrônimo do periódico no SciELO, 
-utiliza-se ``@journal-id-type="publisher-id"``:
- 
-.. code-block:: xml
- 
-    <journal-id journal-id-type="publisher-id">mioc</journal-id>
+.. note:: Consulte o :ref:`arquivo de metadados dos periódicos <journal-meta-csv>` 
+          como referência na identificação dos elementos.
 
 
 .. _elemento-journal-title-group:
